@@ -8,15 +8,20 @@ class Program
 
         // Pedimos un gasto al usuario
         Console.Write("Ingresa un gasto: ");
-
-        // Leemos lo que el usuario escribe
         string entrada = Console.ReadLine();
 
-        // Convertimos el texto a número
-        double gasto = double.Parse(entrada);
+        // Intentamos convertir el texto a número
+        bool esNumero = double.TryParse(entrada, out double gasto);
 
-        // Mostramos el valor ingresado
-        Console.WriteLine($"Gasto ingresado: ${gasto}");
+        // Validamos el resultado
+        if (esNumero && gasto > 0)
+        {
+            Console.WriteLine($"Gasto válido: ${gasto}");
+        }
+        else
+        {
+            Console.WriteLine("Entrada inválida. Ingresa un número mayor a 0.");
+        }
 
         Console.ReadKey();
     }
