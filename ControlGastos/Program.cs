@@ -6,22 +6,28 @@ class Program
     {
         Console.WriteLine("CONTROL DE GASTOS");
 
-        // Pedimos un gasto al usuario
-        Console.Write("Ingresa un gasto: ");
-        string entrada = Console.ReadLine();
+        // Variable para acumular el total de gastos
+        double total = 0;
 
-        // Intentamos convertir el texto a número
-        bool esNumero = double.TryParse(entrada, out double gasto);
+        // Variable para controlar el bucle
+        string opcion = "s";
 
-        // Validamos el resultado
-        if (esNumero && gasto > 0)
+        // Bucle que se ejecuta mientras el usuario quiera continuar
+        while (opcion == "s")
         {
-            Console.WriteLine($"Gasto válido: ${gasto}");
+            Console.Write("Ingresa un gasto: ");
+
+            double gasto = double.Parse(Console.ReadLine());
+
+            // Sumamos el gasto al total
+            total += gasto;
+
+            Console.Write("¿Deseas agregar otro gasto? (s/n): ");
+            opcion = Console.ReadLine();
         }
-        else
-        {
-            Console.WriteLine("Entrada inválida. Ingresa un número mayor a 0.");
-        }
+
+        // Mostramos el total al final
+        Console.WriteLine($"Total de gastos: ${total}");
 
         Console.ReadKey();
     }
