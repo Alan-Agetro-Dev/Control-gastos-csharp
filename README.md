@@ -1,3 +1,4 @@
+
 # Control de Gastos - C#
 
 Proyecto de consola desarrollado en **C# con Visual Studio**.
@@ -24,11 +25,11 @@ Este proyecto permite:
 
 ---
 
-## 🧩 Estructura del código
+##  Estructura del código
 
 El programa está organizado en varios métodos:
 
-### 🔹 Main
+###  Main
 Punto de entrada del programa. Coordina la ejecución general:
 - Inicializa el arreglo de gastos
 - Llama a los métodos principales
@@ -54,7 +55,7 @@ Punto de entrada del programa. Coordina la ejecución general:
 
 ---
 
-## 📅 Progreso del proyecto
+##  Progreso del proyecto
 
 - **Día 1:** Creación del proyecto y estructura inicial  
   > Nota: Este día quedó incluido dentro del primer commit funcional
@@ -78,3 +79,4 @@ Punto de entrada del programa. Coordina la ejecución general:
 - Condicionales (`if`)
 - Bucles (`while`, `for`)
 - Métodos
+
